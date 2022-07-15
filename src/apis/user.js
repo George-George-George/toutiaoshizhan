@@ -12,3 +12,13 @@ export const login = (mobile, code) => {
     data: { mobile: mobile, code: code }
   })
 }
+/**
+ *
+ * @param {string} mobile 手机号
+ * @returns
+ */
+export const sendCode = (mobile) => {
+  return request({
+    url: `/v1_0/sms/codes/${mobile}`
+  })
+}
