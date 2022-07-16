@@ -80,8 +80,9 @@ export default {
         const res = await login(this.mobile, this.code)
         this.$store.commit('setUser', res.data.data)
         this.$toast.success('登录成功')
-        this.$router.push('/profile')
+        this.$router.push('/my')
       } catch (error) {
+        console.log(error)
         const status = error.response.status
         let message = '登录失败，请刷新'
         if (status === 400) {
