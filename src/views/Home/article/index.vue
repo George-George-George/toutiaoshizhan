@@ -48,7 +48,7 @@ export default {
       try {
         const { data } = await getNewList1(this.id, +new Date())
         this.newList = data.data.results
-        console.log(this.newList)
+        // console.log(this.newList)
         this.pre_timestamp = data.data.pre_timestamp
       } catch (error) {
         const status = error.response.status

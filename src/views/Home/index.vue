@@ -2,7 +2,9 @@
   <div>
     <van-nav-bar class="navbar">
       <template #title>
-        <van-button round><van-icon name="search"></van-icon>搜索</van-button>
+        <van-button round @click="$router.push('/search')"
+          ><van-icon name="search"></van-icon>搜索</van-button
+        >
       </template>
     </van-nav-bar>
 
@@ -70,7 +72,7 @@ export default {
         setMyChannelLocal(this.channelList)
       } else {
         try {
-          await delMychannel()
+          await delMychannel(id.id)
         } catch (error) {
           this.$toast.fail('删除失败')
         }
@@ -86,6 +88,7 @@ export default {
         setMyChannelLocal(this.channelList)
       } else {
         try {
+          console.log(123)
           await addMychannel(channel.id, this.channelList.length)
         } catch (error) {
           return this.$toast.fail('失败')

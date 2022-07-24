@@ -6,7 +6,7 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 import 'amfe-flexible'
 import '@/styles/icon.less'
-
+import '../node_modules/github-markdown-css'
 Vue.use(Vant)
 Vue.config.productionTip = false
 

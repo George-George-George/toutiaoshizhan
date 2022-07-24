@@ -30,6 +30,18 @@ const routes = [
         component: () => import('@/views/Video')
       }
     ]
+  },
+  {
+    path: '/search',
+    component: () => import('@/views/search')
+  },
+  {
+    path: '/detail/:id',
+    component: () => import('@/views/Home/article/articleCon')
+  },
+  {
+    path: '/user',
+    component: () => import('@/views/My/editMsg')
   }
 ]
 

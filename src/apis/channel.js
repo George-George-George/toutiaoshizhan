@@ -16,14 +16,14 @@ export const getAllChannel = () => {
 export const delMychannel = (target) => {
   return request({
     url: `/v1_0/user/channels/${target}`,
-    Method: 'DELETE'
+    method: 'DELETE'
   })
 }
 
 export const addMychannel = (id, seq) => {
   return request({
     url: '/v1_0/user/channels',
-    Method: 'PATCH',
+    method: 'PATCH',
     data: {
       channels: [{ id, seq }]
     }

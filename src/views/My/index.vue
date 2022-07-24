@@ -19,7 +19,7 @@
           </van-col>
           <van-col span="11">
             <van-row class="code-row" type="flex" align="center" justify="end">
-              <van-button class="code-btn" size="mini" round
+              <van-button class="code-btn" size="mini" round @click="spaceUser"
                 >编辑资料</van-button
               >
             </van-row>
@@ -105,6 +105,9 @@ export default {
         } = await getUserInfo()
         this.userInfo = data
       }
+    },
+    spaceUser() {
+      this.$router.push('/user')
     }
   }
 }
